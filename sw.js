@@ -1,9 +1,9 @@
 var CACHE_NAME = 'pwa-v1';
 var FILES = [
-  '/pwa/index.html',
-  '/pwa/js/app.js',  
-  '/pwa/js/info.js',
-  '/pwa/img/icon192.png',
+  'index.html',
+  'js/app.js',  
+  'js/info.js',
+  'img/icon192.png',
 ];
 
 self.addEventListener('install', (e) => {
