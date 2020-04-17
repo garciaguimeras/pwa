@@ -2,7 +2,7 @@
     "name": "My Progressive Web App",
     "short_name": "my-pwa",
     "description": "A demo web app",
-    "start_url": "",
+    "start_url": "index.html",
     "display": "standalone",
     "scope": "/pwa",
     "icons": [
