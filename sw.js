@@ -1,5 +1,6 @@
 var CACHE_NAME = 'pwa-v1';
 var FILES = [
+  '',
   'index.html',
   'js/app.js',  
   'js/info.js',

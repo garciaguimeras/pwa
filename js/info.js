@@ -1,2 +1,2 @@
 var infoElem = document.getElementById("info");
-infoElem.innerHTML = "v10";
+infoElem.innerHTML = "v12";
