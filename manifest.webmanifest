@@ -2,12 +2,11 @@
     "name": "My Progressive Web App",
     "short_name": "my-pwa",
     "description": "A demo web app",
-    "start_url": "/pwa/",
+    "start_url": "/",
     "display": "standalone",
-    "scope": "/pwa/",
     "icons": [
         {
-            "src": "/pwa/img/icon192.png",
+            "src": "/img/icon192.png",
             "sizes": "192x192",
             "type": "image/png"
         }

@@ -1,13 +1,3 @@
-if ('serviceWorker' in navigator) {
+var infoElem = document.getElementById("info");
+infoElem.innerHTML = "v12";
 
-    navigator.serviceWorker.register('/sw.js').then(
-      function(registration) {
-        console.log('SW register: OK');
-        console.log(registration);
-      }, 
-      function(err) {
-        console.log('SW register: FAILED. Cause: ', err);
-      }
-    );
-    
-  }

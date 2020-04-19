@@ -3,7 +3,6 @@ var FILES = [
   '',
   'index.html',
   'js/app.js',  
-  'js/info.js',
   'img/icon192.png',
 ];
 
