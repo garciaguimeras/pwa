@@ -18,6 +18,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
+/*
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request)
@@ -34,5 +35,28 @@ self.addEventListener('fetch', (e) => {
                                         });
                         });
           })
+  );
+});
+*/
+
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    fetch(e.request).then(
+      function(response) {
+        console.log('[Service Worker] Fetching OK: ' + e.request.url);
+        return caches.open(CACHE_NAME).then((cache) => {
+          console.log('[Service Worker] Caching resource: '+ e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      },
+      function(err) {
+        console.log('[Service Worker] Fetching ERROR: ' + err);
+        return caches.match(e.request).then((r) => {
+          console.log('[Service Worker] Getting resource from cache: '+ e.request.url);
+          return r;
+        });
+      }
+    )
   );
 });
