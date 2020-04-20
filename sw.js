@@ -1,4 +1,4 @@
-var CACHE_NAME = 'pwa-v1';
+var CACHE_NAME = 'pwa-v2';
 var FILES = [
   '',
   'index.html',
@@ -58,5 +58,18 @@ self.addEventListener('fetch', (e) => {
         });
       }
     )
+  );
+});
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if(key !== CACHE_NAME) {
+          console.log('[Service Worker] Removing old cache: ' + key);
+          return caches.delete(key);
+        }
+      }));
+    })
   );
 });
