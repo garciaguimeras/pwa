@@ -4,6 +4,7 @@ var FILES = [
   'index.html',
   'js/app.js',  
   'img/icon192.png',
+  'img/icon512.png',
 ];
 
 self.addEventListener('install', (e) => {
